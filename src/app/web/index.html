@@ -6,13 +6,12 @@
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <title>Creator Economy Earnings Forecast</title>
           <link rel="stylesheet" href="./styles.css">
-          <style>:root { --accent: #0077b6; }</style>
         </head>
-        <body>
-          <div class="page">
+        <body class="surface-paper">
+          <div class="page layout-board eyebrow-outline headline-compact modules-3 hero-align-center">
             <section class="hero">
               <div class="panel hero-copy">
-                <span class="eyebrow">Predictive Application</span>
+                <span class="eyebrow" data-health>Planning Workspace</span>
                 <h1 id="project-title">Creator Economy Earnings Forecast</h1>
                 <p id="project-summary" class="lead">Forecast creator revenue variability and identify platform-side levers that improve retention.</p>
                 <ul id="project-tags" class="tag-list">
@@ -26,55 +25,90 @@
 <article class='card'><span>Data Freshness</span><strong>7h</strong><em>steady</em></article>
                 </div>
                 <div class="mini-grid">
-                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>MediaTech</strong></article><article class='mini-card'><span>Interface</span><strong>FastAPI + Browser UI</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
+                  <article class='mini-card'><span>Project Type</span><strong>ML</strong></article><article class='mini-card'><span>Domain</span><strong>MediaTech</strong></article><article class='mini-card'><span>Application</span><strong>Planning Workspace</strong></article><article class='mini-card'><span>Deployment</span><strong>Docker + CI</strong></article>
                 </div>
               </div>
             </section>
             <section class="app-grid">
-              <article class="panel module">
-                <div class="module-header">
-                  <span>Application 01</span>
-                  <h2>Scoring Workbench</h2>
-                  <p>Edit feature inputs and simulate a production prediction pass.</p>
-                </div>
-                <textarea id="score-input"></textarea>
-                <div class="button-row">
-                  <button id="run-score">Run Scoring</button>
-                  <button id="load-defaults" class="secondary" type="button">Reload Defaults</button>
-                </div>
-                <pre id="score-output"></pre>
-              </article>
-              <article class="panel module">
-                <div class="module-header">
-                  <span>Application 02</span>
-                  <h2>KPI Comparison</h2>
-                  <p>Compare current metrics against a baseline and surface the biggest movement.</p>
-                </div>
-                <textarea id="analyze-input"></textarea>
-                <div class="button-row">
-                  <button id="run-analyze">Run Analysis</button>
-                </div>
-                <pre id="analyze-output"></pre>
-              </article>
-              <article class="panel module">
-                <div class="module-header">
-                  <span>Application 03</span>
-                  <h2>Operator Brief</h2>
-                  <p>Ask for a grounded recommendation built from local project context.</p>
-                </div>
-                <textarea id="query-input" class="query-input"></textarea>
-                <div class="button-row">
-                  <button id="run-query">Run Query</button>
-                </div>
-                <pre id="query-output"></pre>
-              </article>
+              <article class="panel module js-module span-normal">
+          <div class="module-header">
+            <span>Scenario 01</span>
+            <h2>Forecast Input Studio</h2>
+            <p>Model a planning scenario from the primary business and operational levers.</p>
+          </div>
+          <textarea class="js-input">{
+  &quot;features&quot;: {
+    &quot;engagement_score&quot;: 80,
+    &quot;tenure_days&quot;: 204,
+    &quot;payment_miss_count&quot;: 2,
+    &quot;segment&quot;: &quot;consumer&quot;,
+    &quot;priority_flag&quot;: false
+  }
+}</textarea>
+          <div class="button-row">
+            <button class="js-run" data-endpoint="/score" data-input-mode="json">Run Scenario</button>
+          </div>
+          <pre class="js-output">Forecast confidence and planning band will appear here.</pre>
+        </article>
+<article class="panel module js-module span-wide">
+          <div class="module-header">
+            <span>Scenario 02</span>
+            <h2>Variance Explorer</h2>
+            <p>Explain how actual metrics differ from the expected planning baseline.</p>
+          </div>
+          <textarea class="js-input">{
+  &quot;metrics&quot;: {
+    &quot;acquisition&quot;: 41.6,
+    &quot;activation&quot;: 41.0,
+    &quot;retention&quot;: 53.2,
+    &quot;revenue&quot;: 86.2
+  },
+  &quot;baseline&quot;: {
+    &quot;acquisition&quot;: 38.27,
+    &quot;activation&quot;: 37.72,
+    &quot;retention&quot;: 48.94,
+    &quot;revenue&quot;: 79.3
+  }
+}</textarea>
+          <div class="button-row">
+            <button class="js-run" data-endpoint="/analyze" data-input-mode="json">Analyze Variance</button>
+          </div>
+          <pre class="js-output">Variance summary and largest movement will appear here.</pre>
+        </article>
+<article class="panel module js-module span-normal">
+          <div class="module-header">
+            <span>Scenario 03</span>
+            <h2>Planning Memo</h2>
+            <p>Turn raw scenario inputs into a concise operational recommendation.</p>
+          </div>
+          <textarea class="js-input">{
+  &quot;prompt&quot;: &quot;Recommend the next best action for Creator Economy Earnings Forecast.&quot;,
+  &quot;features&quot;: {
+    &quot;engagement_score&quot;: 80,
+    &quot;tenure_days&quot;: 204,
+    &quot;payment_miss_count&quot;: 2,
+    &quot;segment&quot;: &quot;consumer&quot;,
+    &quot;priority_flag&quot;: false
+  },
+  &quot;metrics&quot;: {
+    &quot;acquisition&quot;: 41.6,
+    &quot;activation&quot;: 41.0,
+    &quot;retention&quot;: 53.2,
+    &quot;revenue&quot;: 86.2
+  }
+}</textarea>
+          <div class="button-row">
+            <button class="js-run" data-endpoint="/recommend" data-input-mode="json">Draft Memo</button>
+          </div>
+          <pre class="js-output">Decision memo and next steps will appear here.</pre>
+        </article>
             </section>
             <footer class="footer">
-              <span>Data Science + AI + LLM + RAG Portfolio</span>
+              <span>MediaTech • ML • Planning Workspace</span>
               <span>creator-economy-earnings-forecast</span>
             </footer>
           </div>
-          <script id="bootstrap-data" type="application/json">{"project": {"slug": "creator-economy-earnings-forecast", "title": "Creator Economy Earnings Forecast", "project_type": "ml", "domain": "MediaTech", "summary": "Forecast creator revenue variability and identify platform-side levers that improve retention.", "tags": ["creator", "forecast", "retention"]}, "sample_features": {"engagement_score": 80, "tenure_days": 204, "payment_miss_count": 2, "segment": "consumer", "priority_flag": false}, "sample_metrics": {"acquisition": 41.6, "activation": 41.0, "retention": 53.2, "revenue": 86.2}, "sample_query": "What is the top priority recommendation?", "knowledge_base": ["Creator Economy Earnings Forecast is positioned as a MediaTech starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Forecast creator revenue variability and identify platform-side levers that improve retention.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on creator, forecast, retention."], "dashboard_metrics": [{"label": "Model Lift", "value": "75%", "delta": "+6.4%"}, {"label": "Serving P95", "value": "128ms", "delta": "-12ms"}, {"label": "Data Freshness", "value": "7h", "delta": "steady"}]}</script>
+          <script id="bootstrap-data" type="application/json">{"project": {"slug": "creator-economy-earnings-forecast", "title": "Creator Economy Earnings Forecast", "project_type": "ml", "domain": "MediaTech", "summary": "Forecast creator revenue variability and identify platform-side levers that improve retention.", "tags": ["creator", "forecast", "retention"]}, "app_archetype": "planner", "ui_profile": {"layout": "board", "surface": "paper", "font_stack": "\"Manrope\", \"Segoe UI\", sans-serif", "radius": 21, "shadow": 43, "eyebrow_style": "outline", "module_columns": 3, "hero_align": "center", "headline_mode": "compact"}, "app_modules": [{"label": "Scenario 01", "title": "Forecast Input Studio", "description": "Model a planning scenario from the primary business and operational levers.", "endpoint": "/score", "input_mode": "json", "cta": "Run Scenario", "prefill": "{\n  \"features\": {\n    \"engagement_score\": 80,\n    \"tenure_days\": 204,\n    \"payment_miss_count\": 2,\n    \"segment\": \"consumer\",\n    \"priority_flag\": false\n  }\n}", "hint": "Forecast confidence and planning band will appear here.", "span": "normal"}, {"label": "Scenario 02", "title": "Variance Explorer", "description": "Explain how actual metrics differ from the expected planning baseline.", "endpoint": "/analyze", "input_mode": "json", "cta": "Analyze Variance", "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 41.6,\n    \"activation\": 41.0,\n    \"retention\": 53.2,\n    \"revenue\": 86.2\n  },\n  \"baseline\": {\n    \"acquisition\": 38.27,\n    \"activation\": 37.72,\n    \"retention\": 48.94,\n    \"revenue\": 79.3\n  }\n}", "hint": "Variance summary and largest movement will appear here.", "span": "wide"}, {"label": "Scenario 03", "title": "Planning Memo", "description": "Turn raw scenario inputs into a concise operational recommendation.", "endpoint": "/recommend", "input_mode": "json", "cta": "Draft Memo", "prefill": "{\n  \"prompt\": \"Recommend the next best action for Creator Economy Earnings Forecast.\",\n  \"features\": {\n    \"engagement_score\": 80,\n    \"tenure_days\": 204,\n    \"payment_miss_count\": 2,\n    \"segment\": \"consumer\",\n    \"priority_flag\": false\n  },\n  \"metrics\": {\n    \"acquisition\": 41.6,\n    \"activation\": 41.0,\n    \"retention\": 53.2,\n    \"revenue\": 86.2\n  }\n}", "hint": "Decision memo and next steps will appear here.", "span": "normal"}], "sample_features": {"engagement_score": 80, "tenure_days": 204, "payment_miss_count": 2, "segment": "consumer", "priority_flag": false}, "sample_metrics": {"acquisition": 41.6, "activation": 41.0, "retention": 53.2, "revenue": 86.2}, "knowledge_base": ["Creator Economy Earnings Forecast is positioned as a MediaTech starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.", "The primary value proposition is: Forecast creator revenue variability and identify platform-side levers that improve retention.", "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.", "Typical stakeholders include analytics, operations, product, and leadership teams working on creator, forecast, retention."], "dashboard_metrics": [{"label": "Model Lift", "value": "75%", "delta": "+6.4%"}, {"label": "Serving P95", "value": "128ms", "delta": "-12ms"}, {"label": "Data Freshness", "value": "7h", "delta": "steady"}]}</script>
           <script src="./app.js"></script>
         </body>
         </html>

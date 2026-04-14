@@ -9,7 +9,8 @@
     "forecast",
     "retention"
   ],
-  "accent": "#0077b6",
+  "accent": "#2cc862",
+  "secondary_accent": "#35a92c",
   "dashboard_metrics": [
     {
       "label": "Model Lift",
@@ -45,5 +46,52 @@
     "The primary value proposition is: Forecast creator revenue variability and identify platform-side levers that improve retention.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on creator, forecast, retention."
+  ],
+  "app_archetype": "planner",
+  "ui_profile": {
+    "layout": "board",
+    "surface": "paper",
+    "font_stack": "\"Manrope\", \"Segoe UI\", sans-serif",
+    "radius": 21,
+    "shadow": 43,
+    "eyebrow_style": "outline",
+    "module_columns": 3,
+    "hero_align": "center",
+    "headline_mode": "compact"
+  },
+  "app_modules": [
+    {
+      "label": "Scenario 01",
+      "title": "Forecast Input Studio",
+      "description": "Model a planning scenario from the primary business and operational levers.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Run Scenario",
+      "prefill": "{\n  \"features\": {\n    \"engagement_score\": 80,\n    \"tenure_days\": 204,\n    \"payment_miss_count\": 2,\n    \"segment\": \"consumer\",\n    \"priority_flag\": false\n  }\n}",
+      "hint": "Forecast confidence and planning band will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Scenario 02",
+      "title": "Variance Explorer",
+      "description": "Explain how actual metrics differ from the expected planning baseline.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Analyze Variance",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 41.6,\n    \"activation\": 41.0,\n    \"retention\": 53.2,\n    \"revenue\": 86.2\n  },\n  \"baseline\": {\n    \"acquisition\": 38.27,\n    \"activation\": 37.72,\n    \"retention\": 48.94,\n    \"revenue\": 79.3\n  }\n}",
+      "hint": "Variance summary and largest movement will appear here.",
+      "span": "wide"
+    },
+    {
+      "label": "Scenario 03",
+      "title": "Planning Memo",
+      "description": "Turn raw scenario inputs into a concise operational recommendation.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Draft Memo",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Creator Economy Earnings Forecast.\",\n  \"features\": {\n    \"engagement_score\": 80,\n    \"tenure_days\": 204,\n    \"payment_miss_count\": 2,\n    \"segment\": \"consumer\",\n    \"priority_flag\": false\n  },\n  \"metrics\": {\n    \"acquisition\": 41.6,\n    \"activation\": 41.0,\n    \"retention\": 53.2,\n    \"revenue\": 86.2\n  }\n}",
+      "hint": "Decision memo and next steps will appear here.",
+      "span": "normal"
+    }
   ]
 }
