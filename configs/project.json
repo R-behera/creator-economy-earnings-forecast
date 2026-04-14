@@ -1,0 +1,49 @@
+{
+  "slug": "creator-economy-earnings-forecast",
+  "title": "Creator Economy Earnings Forecast",
+  "project_type": "ml",
+  "domain": "MediaTech",
+  "summary": "Forecast creator revenue variability and identify platform-side levers that improve retention.",
+  "tags": [
+    "creator",
+    "forecast",
+    "retention"
+  ],
+  "accent": "#0077b6",
+  "dashboard_metrics": [
+    {
+      "label": "Model Lift",
+      "value": "75%",
+      "delta": "+6.4%"
+    },
+    {
+      "label": "Serving P95",
+      "value": "128ms",
+      "delta": "-12ms"
+    },
+    {
+      "label": "Data Freshness",
+      "value": "7h",
+      "delta": "steady"
+    }
+  ],
+  "sample_features": {
+    "engagement_score": 80,
+    "tenure_days": 204,
+    "payment_miss_count": 2,
+    "segment": "consumer",
+    "priority_flag": false
+  },
+  "sample_metrics": {
+    "acquisition": 41.6,
+    "activation": 41.0,
+    "retention": 53.2,
+    "revenue": 86.2
+  },
+  "knowledge_base": [
+    "Creator Economy Earnings Forecast is positioned as a MediaTech starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Forecast creator revenue variability and identify platform-side levers that improve retention.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on creator, forecast, retention."
+  ]
+}
